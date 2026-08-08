@@ -12,11 +12,11 @@ FamiliarVoice is an Android accessibility prototype that turns supported incomin
 
 The full FamiliarVoice source repository is intentionally private while development continues; the public case study documents the product, technology, testing, and Zachary's work without publishing the complete implementation.
 
-### Career Command Center
+### [Career Command Center — Public Case Study](https://github.com/ZachPoli/ZachPoli/blob/main/projects/career-command-center.md)
 
 Career Command Center is a local-first workflow application for job discovery, opportunity verification, ATS analysis, evidence-based resume tailoring, application tracking, and iterative match-quality improvement.
 
-A sanitized public portfolio release is planned after the private candidate data, credentials, and local production state are fully separated from demonstration data.
+The production application remains private because it contains candidate data, credentials, and local state. The public engineering case study documents the architecture, validated workflow, and results without publishing those private materials.
 
 ## Business Roadmap
 
