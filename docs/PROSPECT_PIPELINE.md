@@ -112,12 +112,63 @@ Message used:
 
 ---
 
+## Prospect 003 — Thetford Industrial Solutions / B&J Machine Works
+
+**Status:** Ready  
+**Priority:** A-  
+**Location:** 1495 Highway 51 N, Covington, TN 38019  
+**Public business phone:** 901-296-5188  
+**Business type:** Machine shop / custom machining / industrial fabrication and services  
+**Website:** No Tennessee official website confidently verified; do not use the similarly named Texas B&J Machine Works site for outreach.  
+
+### Primary Contact
+
+**Michael Dubeck**  
+**Role:** Operations Manager, Thetford Industrial Solutions LLC  
+**LinkedIn:** https://www.linkedin.com/in/michael-dubeck-29597222  
+
+### Secondary Contact
+
+**Tommy Thetford**  
+**Role:** Owner/President-level contact; Thetford Industrial Solutions / B&J Machine Works  
+**LinkedIn:** https://www.linkedin.com/in/tommy-thetford-3551b1157  
+
+### Why Zenith Is Interested
+
+- Michael Dubeck is directly aligned with the type of person Zenith wants to learn from: manufacturing operations, process improvement, documentation, shipping/receiving, Excel, plant management, and production experience.
+- B&J Machine Works is publicly listed as a Covington machine shop supporting CNC, prototype/development machining, production runs, lathe/mill work, and related manufacturing services.
+- Thetford Industrial Solutions also publicly discusses fabrication, industrial maintenance, crane/system work, and customer project execution.
+- Plausible discovery areas include job tracking, estimating handoffs, production status, materials, shipping/receiving, documentation, and repetitive reporting.
+
+### Outreach History
+
+- Not contacted yet.
+
+### Conversation Notes
+
+- None yet.
+
+### Next Action
+
+- Send Michael Dubeck a low-pressure LinkedIn connection request.
+- Lead with Zach's local manufacturing background and interest in understanding where smaller industrial operations still lose time to manual processes.
+- Do not pitch a predetermined software package in the connection request.
+- If Michael accepts, ask one focused discovery question before discussing services.
+
+### Public Sources
+
+- Michael Dubeck LinkedIn: https://www.linkedin.com/in/michael-dubeck-29597222
+- Tommy Thetford LinkedIn: https://www.linkedin.com/in/tommy-thetford-3551b1157
+- Covington B&J listing: https://www.mapquest.com/us/tennessee/b-j-machine-works-380670670
+
+---
+
 ## Pipeline Metrics
 
 | Metric | Count |
 |---|---:|
-| Prospects researched | 2 |
-| Ready for outreach | 0 |
+| Prospects researched | 3 |
+| Ready for outreach | 1 |
 | Contacted | 2 |
 | Connected | 0 |
 | Discovery conversations | 0 |
