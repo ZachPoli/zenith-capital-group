@@ -114,7 +114,7 @@ Message used:
 
 ## Prospect 003 — Thetford Industrial Solutions / B&J Machine Works
 
-**Status:** Ready  
+**Status:** Contacted  
 **Priority:** A-  
 **Location:** 1495 Highway 51 N, Covington, TN 38019  
 **Public business phone:** 901-296-5188  
@@ -137,8 +137,61 @@ Message used:
 
 - Michael Dubeck is directly aligned with the type of person Zenith wants to learn from: manufacturing operations, process improvement, documentation, shipping/receiving, Excel, plant management, and production experience.
 - B&J Machine Works is publicly listed as a Covington machine shop supporting CNC, prototype/development machining, production runs, lathe/mill work, and related manufacturing services.
-- Thetford Industrial Solutions also publicly discusses fabrication, industrial maintenance, crane/system work, and customer project execution.
 - Plausible discovery areas include job tracking, estimating handoffs, production status, materials, shipping/receiving, documentation, and repetitive reporting.
+
+### Outreach History
+
+**2026-08-13 — LinkedIn connection request sent to Michael Dubeck**
+
+Connection note used:
+
+> Hey Michael, I'm local to Tipton County with a manufacturing background. I previously built an inventory/database tool around shop-floor material tracking, and I'm now starting a software/automation business focused on local industrial operations. Thought I'd connect.
+
+### Conversation Notes
+
+- No response yet.
+
+### Next Action
+
+- Wait for Michael to accept or reply.
+- If he accepts, ask one focused discovery question about manual/repetitive operational work before discussing services.
+- Keep Tommy Thetford as a secondary route if Michael does not respond after an appropriate follow-up interval.
+
+### Public Sources
+
+- Michael Dubeck LinkedIn: https://www.linkedin.com/in/michael-dubeck-29597222
+- Tommy Thetford LinkedIn: https://www.linkedin.com/in/tommy-thetford-3551b1157
+- Covington B&J listing: https://www.mapquest.com/us/tennessee/b-j-machine-works-380670670
+
+---
+
+## Prospect 004 — Rose Fabricating
+
+**Status:** Ready  
+**Priority:** A-  
+**Location:** 230 Industrial Road North, Covington, TN 38019  
+**Business phone:** 901-476-2202  
+**General email:** info@rosefabricating.com  
+**Business type:** Steel / custom industrial fabrication  
+**Website:** https://rosefabricating.com/  
+
+### Primary Contact
+
+**Mike Scott**  
+**Role:** General Manager  
+**Public business email:** mscott@rosefabricating.com  
+
+### Secondary Contacts
+
+**Tim Rowland** — Director of Sales & Business Development — trowland@rosefabricating.com  
+**Gary Webb** — Director of Engineering and Projects — gwebb@rosefabricating.com  
+
+### Why Zenith Is Interested
+
+- Long-running Covington fabrication company with complex project, engineering, production, quality-control, and reporting workflows.
+- Publicly describes project-manager updates, shop-detail drawings, project manuals, QC checkpoints, and automated fabrication equipment.
+- Larger and likely more process-mature than the first three prospects, making this a useful test of whether Zenith can find smaller workflow gaps inside an established operation.
+- Plausible discovery areas include information handoffs, reporting, project status, data entry, material visibility, and repetitive administrative coordination.
 
 ### Outreach History
 
@@ -150,16 +203,14 @@ Message used:
 
 ### Next Action
 
-- Send Michael Dubeck a low-pressure LinkedIn connection request.
-- Lead with Zach's local manufacturing background and interest in understanding where smaller industrial operations still lose time to manual processes.
-- Do not pitch a predetermined software package in the connection request.
-- If Michael accepts, ask one focused discovery question before discussing services.
+- Send a short personalized email to Mike Scott.
+- Lead with local manufacturing experience and curiosity about operational bottlenecks rather than claiming Rose has a specific software problem.
+- Ask whether there are repetitive reporting, tracking, data-entry, or information-handoff processes that still consume disproportionate staff time.
 
 ### Public Sources
 
-- Michael Dubeck LinkedIn: https://www.linkedin.com/in/michael-dubeck-29597222
-- Tommy Thetford LinkedIn: https://www.linkedin.com/in/tommy-thetford-3551b1157
-- Covington B&J listing: https://www.mapquest.com/us/tennessee/b-j-machine-works-380670670
+- Official contact/team page: https://rosefabricating.com/contact/
+- Official capabilities page: https://rosefabricating.com/capabilities/
 
 ---
 
@@ -167,9 +218,9 @@ Message used:
 
 | Metric | Count |
 |---|---:|
-| Prospects researched | 3 |
+| Prospects researched | 4 |
 | Ready for outreach | 1 |
-| Contacted | 2 |
+| Contacted | 3 |
 | Connected | 0 |
 | Discovery conversations | 0 |
 | Proposals sent | 0 |
