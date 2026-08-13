@@ -1,6 +1,6 @@
 # Prospect 007 — Grinder Fabricating & Erection, Inc.
 
-**Status:** Ready
+**Status:** Contacted
 **Priority:** A-
 **Location:** 3333 Fite Road, Millington, TN 38053
 **Business type:** Structural steel fabrication / erection / industrial fabrication
@@ -9,7 +9,7 @@
 
 ## Best Current Outreach Route
 
-Use LinkedIn first with a company-associated contact rather than guessing an email address. Public search results show Steve Grinder in Millington tied directly to Grinder Fabricating & Erection, Inc. The company also offers a public contact form on its official website.
+LinkedIn outreach sent to Steve Grinder, a company-associated contact in Millington. The company also offers a public contact form on its official website.
 
 ## Why Zenith Is Interested
 
@@ -18,9 +18,17 @@ Use LinkedIn first with a company-associated contact rather than guessing an ema
 - Own field-installation crews add shop-to-field coordination, scheduling, status, document-control, and reporting workflows.
 - Steel fabrication and project execution create plausible discovery areas around material status, project tracking, document control, production visibility, and repetitive administrative work.
 
+## Outreach History
+
+**2026-08-13 — LinkedIn connection request sent to Steve Grinder.**
+
+Connection note used:
+
+> Hey Steve, I'm local to the Millington/Tipton County area with a manufacturing background. I built software around shop-floor inventory problems and I'm now helping local industrial businesses reduce repetitive workflow and reporting work. Thought I'd connect.
+
 ## Next Action
 
-Send a low-pressure LinkedIn connection request to the best company-associated contact. Do not claim a specific process is broken. If the connection is accepted, ask one focused discovery question about repetitive manual workflow or information handoffs.
+Wait for a connection or reply. If contact is established, ask one focused discovery question about repetitive manual workflow or information handoffs before discussing a specific software solution.
 
 ## Public Sources
 
