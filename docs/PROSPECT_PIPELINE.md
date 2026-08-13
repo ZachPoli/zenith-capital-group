@@ -167,7 +167,7 @@ Connection note used:
 
 ## Prospect 004 — Rose Fabricating
 
-**Status:** Ready  
+**Status:** Contacted  
 **Priority:** A-  
 **Location:** 230 Industrial Road North, Covington, TN 38019  
 **Business phone:** 901-476-2202  
@@ -195,17 +195,34 @@ Connection note used:
 
 ### Outreach History
 
-- Not contacted yet.
+**2026-08-13 — Direct email sent to Mike Scott, General Manager**
+
+Subject: `Local manufacturing process improvement`
+
+Message used:
+
+> Hi Mike,
+>
+> I'm Zach Maness, local to the Tipton County area. I have a manufacturing background and previously built an inventory/database tool around material-tracking problems I encountered on the shop floor.
+>
+> I'm now starting a local software and automation business focused on helping manufacturers reduce repetitive reporting, tracking, data-entry, and other manual processes.
+>
+> I'm reaching out to a few local manufacturers first to understand where those headaches actually exist rather than trying to sell a canned software package. Is there anything at Rose that still takes more manual work than you think it should?
+>
+> Thanks,
+> Zach
+> Zenith Capital Group
 
 ### Conversation Notes
 
-- None yet.
+- No response yet.
+- This is Zenith's first direct email to a named general manager in the initial outreach sprint.
 
 ### Next Action
 
-- Send a short personalized email to Mike Scott.
-- Lead with local manufacturing experience and curiosity about operational bottlenecks rather than claiming Rose has a specific software problem.
-- Ask whether there are repetitive reporting, tracking, data-entry, or information-handoff processes that still consume disproportionate staff time.
+- Wait for Mike Scott's reply.
+- If he responds with a workflow problem, move the prospect to **Discovery** and clarify the current process, frequency, staff time involved, pain/cost, existing tools, and desired outcome before proposing software.
+- If there is no response, send one short follow-up after an appropriate interval rather than repeatedly emailing.
 
 ### Public Sources
 
@@ -219,8 +236,8 @@ Connection note used:
 | Metric | Count |
 |---|---:|
 | Prospects researched | 4 |
-| Ready for outreach | 1 |
-| Contacted | 3 |
+| Ready for outreach | 0 |
+| Contacted | 4 |
 | Connected | 0 |
 | Discovery conversations | 0 |
 | Proposals sent | 0 |
