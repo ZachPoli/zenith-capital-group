@@ -66,7 +66,7 @@ Connection note used:
 
 ## Prospect 002 — Edward's Sheet Metal Works, Inc.
 
-**Status:** Ready  
+**Status:** Contacted  
 **Priority:** A  
 **Location:** 298 Wilkinsville Rd, Drummonds, TN 38023  
 **Business phone:** 901-835-4686  
@@ -88,12 +88,22 @@ A third-party D&B listing names **James E. Brashier Sr.** as a contact, but that
 
 ### Outreach History
 
-- Not contacted yet.
+**2026-08-13 — Website contact form submitted**
+
+Message used:
+
+> Hi, I'm Zach. I'm local to Tipton County and have a manufacturing background. I previously built an inventory/database tool around material tracking on the shop floor, and I'm starting a local software/automation business. Who would be the best person to speak with about operations or process improvement?
+
+### Conversation Notes
+
+- No response yet.
+- Initial outreach intentionally asks for the correct operations/process-improvement contact rather than pitching a predetermined software package.
 
 ### Next Action
 
-- Prefer a low-pressure written/contact-form route if available before requiring a phone call.
-- If calling later, first objective is simply to identify the person responsible for operations/process improvement—not to pitch a software package.
+- Wait for a reply identifying the appropriate decision-maker.
+- If there is no response, consider a short follow-up through the website or a phone call later; the first goal remains identifying the right person.
+- If a decision-maker responds, move to a low-pressure discovery question about repetitive/manual workflows.
 
 ### Public Sources
 
@@ -107,8 +117,8 @@ A third-party D&B listing names **James E. Brashier Sr.** as a contact, but that
 | Metric | Count |
 |---|---:|
 | Prospects researched | 2 |
-| Ready for outreach | 1 |
-| Contacted | 1 |
+| Ready for outreach | 0 |
+| Contacted | 2 |
 | Connected | 0 |
 | Discovery conversations | 0 |
 | Proposals sent | 0 |
