@@ -1,113 +1,208 @@
 # Zenith Capital Group — First 90 Days
 
-This plan assumes the founder chooses to leave trucking and dedicate full-time effort to Zenith. If employment circumstances change, keep the sequence and adjust the hours.
+This execution plan is now centered on **turning the existing inventory application into a streamlined, trial-ready industrial product** rather than relying primarily on open-ended custom consulting.
+
+The operating loop is:
+
+> Build -> simplify -> package -> put in front of real users -> learn -> sell -> modularize what repeats.
 
 ## Operating Rules
 
-- Treat weekdays like a real company, not an endless free-form coding session.
-- Revenue work comes before polishing.
-- Keep personal and business cash separate.
-- Do not use the entire day for job applications; keep a selective job-search lane without letting it consume the company-building lane.
+- Product work must move the software closer to being installable and usable by a stranger.
+- Do not add features simply because they are technically interesting.
+- Keep the inventory core small; factory-specific software belongs behind integration/adaptor boundaries.
+- Customer contact remains required, but use a concrete product/trial whenever possible instead of blank-page consulting discovery.
+- FamiliarVoice continues through bounded milestones and is not abandoned.
+- Career Command Center remains internal-first until the workflow is proven enough to justify commercialization.
+- No new speculative product becomes active without an explicit decision to pause something else.
 - Protect sleep, exercise, food, and recovery because founder capacity is a business asset.
 
-## Daily Structure
+---
 
-A default full-time weekday:
+# Days 1–14 — Secure, Baseline, and Unbloat
 
-- **8:00–8:30** — plan, metrics, inbox
-- **8:30–11:00** — revenue work: prospecting, calls, proposals, customer delivery
-- **11:00–12:00** — administration / lunch
-- **12:00–3:00** — build: client work or product development
-- **3:00–4:00** — sales follow-up / networking
-- **4:00–5:00** — documentation, learning, next-day setup
+## Zenith Inventory
 
-Do not treat this as a prison. It is a default operating rhythm. Change it when customers, health, or high-value work require it.
+- [ ] Remove active committed secrets/default credentials from the repository.
+- [ ] Rotate any credential that was ever real or reused elsewhere.
+- [ ] Create a clean productization branch.
+- [ ] Document current valuable behavior before deleting legacy code.
+- [ ] Define a smoke-test checklist for inventory CRUD, barcode lookup, quantity adjustment, import/export, labels, backup, and restore.
+- [ ] Identify Environmental Pneumatics-specific code and separate it into three groups:
+  - useful generic inventory behavior
+  - optional manufacturing behavior
+  - obsolete/legacy behavior to remove
+- [ ] Define the new generic item model.
+- [ ] Define an integration interface so ProNest becomes the first adapter rather than a core dependency.
+- [ ] Get the current application running on the founder's PC from a clean setup and record every friction point.
+
+**Exit criterion:** we understand exactly what the current program does, what must survive, and what should leave the core.
 
 ---
 
-# Days 1–7 — Reset and Launch
+# Days 15–35 — Zero-Hassle Local MVP
 
-- [ ] Recover sleep and hydration after trucking.
-- [ ] Verify personal monthly burn and runway.
-- [ ] Confirm Zenith legal/admin setup.
-- [ ] Choose one primary service offer.
-- [ ] Pick one initial customer niche.
-- [ ] Build a one-page sales page or capability sheet.
-- [ ] Build a simple CRM/lead tracker.
-- [ ] Create 50-prospect starting list.
-- [ ] Contact first 25 prospects.
-- [ ] Continue FamiliarVoice only after daily revenue work is complete.
+Goal: eliminate the current installation burden.
 
-**Exit criterion:** Zenith is capable of accepting money from a customer immediately.
+- [ ] Introduce an embedded local database option; SQLite is the first architecture to evaluate.
+- [ ] Automatically create the local database/schema on first launch.
+- [ ] Store application data in a normal writable user-data directory.
+- [ ] Remove PostgreSQL as a requirement for the first single-user desktop release.
+- [ ] Package a Windows executable/installer.
+- [ ] Add optional fictional demo inventory.
+- [ ] Verify install -> launch -> close -> reopen -> backup -> restore on a clean Windows environment.
+- [ ] Establish simple versioning and release notes.
 
----
-
-# Days 8–30 — First Customer
-
-- [ ] Reach 50 qualified outbound contacts per week.
-- [ ] Conduct customer discovery conversations.
-- [ ] Refine the offer based on actual pain points.
-- [ ] Send paid proposals.
-- [ ] Close and deliver first paid engagement.
-- [ ] Capture a measurable before/after result.
-- [ ] Ask for testimonial and referral.
-- [ ] Publish one credible case study.
-- [ ] Identify which parts of delivery are repeatable.
-
-**Primary milestone:** first commercial revenue.
-
-**Secondary milestone:** a repeatable offer that can be sold again.
+**Acceptance target:** a nontechnical user can download/install, launch, and begin entering/importing inventory in under five minutes without Python, PostgreSQL, or a terminal.
 
 ---
 
-# Days 31–60 — Repeatability
+# Days 36–55 — Streamlined Industrial Inventory Core
 
-- [ ] Sell the offer again.
-- [ ] Create delivery checklists and SOPs.
-- [ ] Raise pricing if demand and results support it.
-- [ ] Add a recurring component where it creates real customer value.
-- [ ] Test one contractor on a tightly scoped task.
-- [ ] Build reusable code/templates from repeated client work.
-- [ ] Continue shipping one proprietary product milestone each week.
-- [ ] Track lead source, conversion rate, delivery hours, gross margin, and recurring revenue.
+Build only the core workflow that most target users need.
 
-**Primary milestone:** revenue is no longer a one-off accident.
+- [ ] Generic item fields: SKU/barcode, item name/description, category/material, quantity, unit, location/bin/shelf, minimum stock, supplier, notes, last updated.
+- [ ] Optional manufacturing fields: thickness/gauge, dimensions, grade/material details.
+- [ ] Fast barcode scan -> lookup -> receive/consume/adjust.
+- [ ] Inventory movement/history log.
+- [ ] Low-stock/reorder view.
+- [ ] Search/filter/sort for hundreds or thousands of items.
+- [ ] CSV/XLSX import with validation/preview.
+- [ ] CSV/XLSX export.
+- [ ] Printable barcode/QR labels.
+- [ ] Reliable backup/restore.
+- [ ] Basic dashboard: low stock, recent activity, items by location/category.
+- [ ] Remove or isolate legacy controls that do not support the primary workflow.
+
+**Exit criterion:** the application feels like one coherent inventory product, not a collection of EP-era utilities.
 
 ---
 
-# Days 61–90 — Build the Machine
+# Days 56–65 — Modular Integrations
 
-- [ ] Decide which service(s) to double down on and which to kill.
-- [ ] Create a repeatable lead-generation process.
-- [ ] Move recurring operational work into SOPs or contractors.
-- [ ] Establish monthly bookkeeping and management dashboard.
-- [ ] Evaluate whether a productized service or SaaS spinout is justified.
-- [ ] Build the first acquisition-watch list without committing capital.
-- [ ] Speak with at least one business broker, acquisition lender, accountant, or acquisition attorney for education.
-- [ ] Complete a 90-day strategy review.
+The core should not know how every factory operates.
 
-## Day-90 Decision
+- [ ] Create a stable integration/adaptor contract.
+- [ ] Move ProNest-specific transformation/export logic into its own adapter.
+- [ ] Keep standard spreadsheet interchange in the core.
+- [ ] Define configuration/metadata an adapter can expose to the UI.
+- [ ] Create a template/example adapter for future customer systems.
+- [ ] Document how a new integration can consume inventory data and produce/import external data without modifying core inventory logic.
 
-Choose based on evidence:
+Potential future adapters should be driven by actual demand:
 
-### A — Continue full-time Zenith
-Use when runway remains adequate and revenue/traction is moving in the right direction.
+- ProNest
+- laser/CNC systems
+- ERP exports/imports
+- accounting systems
+- supplier systems
+- customer-specific CSV mappings
+- APIs
 
-### B — Hybrid strategy
-Take selective contract or analyst work while continuing Zenith when more runway is needed but the business thesis remains promising.
+**Architecture rule:** one customer's external system should not permanently bloat the product core.
 
-### C — Pivot the offer
-If customers are not buying, change the offer or niche rather than endlessly improving the same product.
+---
+
+# Days 66–75 — Trial-Ready Release
+
+- [ ] Neutral Zenith product branding.
+- [ ] Signed/versioned release build where practical.
+- [ ] Download page/release artifact.
+- [ ] Fictional industrial demo dataset.
+- [ ] Two-to-three-minute demo video or GIF.
+- [ ] One-page quick-start guide.
+- [ ] Clear feedback/bug-report route.
+- [ ] Basic terms around backups, data responsibility, and trial use.
+
+**Exit criterion:** we can send a business one link and reasonably ask them to try the product themselves.
+
+---
+
+# Days 76–90 — Real User Validation and First Revenue
+
+Put the trial in front of **3–5 qualified industrial businesses/users**.
+
+The contact goal is no longer generic mass prospecting. The goal is to get relevant people through a concrete product experience.
+
+Observe:
+
+- Could they install without help?
+- Could they import or enter representative inventory?
+- Did barcode/quantity workflows make sense?
+- Which current system do they need to exchange data with?
+- What blocked adoption?
+- Which requested features repeat across users?
+- Would they pay for the product itself?
+- Would they pay for onboarding/data migration?
+- Would they pay for a required integration?
+
+### First monetization experiments
+
+Test combinations of:
+
+- local/desktop license
+- onboarding and spreadsheet migration
+- paid integration modules
+- bounded customization
+- support/maintenance
+
+Do not build cloud sync, multi-user architecture, purchase orders, MRP, or large SaaS infrastructure merely because they might someday be useful. Those become roadmap items when evidence justifies them.
+
+---
+
+# FamiliarVoice During the 90 Days
+
+FamiliarVoice remains active, but bounded.
+
+- Maintain a clearly defined next milestone.
+- Do not allow it to derail the inventory trial-ready sequence.
+- Move it toward outside-user testing rather than endless internal polishing.
+- Reassess commercialization once Zenith Inventory reaches a stable trial milestone or if FamiliarVoice shows stronger external traction first.
+
+---
+
+# Customer Outreach During the 90 Days
+
+Keep the existing local industrial pipeline and follow-up commitments.
+
+However, shift the purpose of new outreach from:
+
+> "What manual process can I build software for?"
+
+Toward:
+
+> "I built a simple barcode-first inventory tool for small industrial teams. Can you try it and tell me what prevents it from fitting your operation?"
+
+This preserves customer evidence while matching Zenith's product-first strategy.
 
 ---
 
 # Revenue Milestones
 
 1. **$1** — proof someone will pay Zenith.
-2. **$500** — proof of a real transaction.
-3. **$1,000/month** — meaningful contribution to personal burn.
-4. **$3,000/month** — current conservative personal-spending coverage.
-5. **$5,000+/month** — room to reinvest rather than merely survive.
-6. **Stable recurring cash flow** — prerequisite for serious hiring and acquisition planning.
+2. **$500** — proof of a real commercial transaction.
+3. **First paid product/setup/integration customer** — proof the inventory thesis can monetize.
+4. **$1,000/month** — meaningful contribution to personal burn.
+5. **$3,000/month** — conservative personal-spending coverage.
+6. **$5,000+/month** — room to reinvest.
+7. **Stable recurring cash flow** — prerequisite for serious hiring and acquisition planning.
 
-Revenue milestones are not promises or deadlines; they are decision points.
+---
+
+# Day-90 Decision
+
+Choose based on evidence:
+
+### A — Double down on Zenith Inventory
+Use when businesses can successfully trial it and at least some show willingness to pay for the product, setup, or integrations.
+
+### B — Refine positioning/workflow
+Use when users engage with the trial but the product solves the wrong slice of inventory or needs a narrower industrial niche.
+
+### C — Product-plus-services hybrid
+Use when the core product creates conversations but most revenue initially comes from migration, integrations, or bounded customization.
+
+### D — Reallocate product priority
+Use only if real evidence shows another owned product, such as FamiliarVoice, has materially stronger commercial pull.
+
+The goal is not to defend a favorite idea forever. The goal is to build owned software that real users can adopt and pay for.
