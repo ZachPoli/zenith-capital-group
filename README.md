@@ -45,16 +45,16 @@ Working prototype codename: **Jarvis**.
 A conversational visual assistant that can use camera or screen context while the user talks naturally. Accessibility use cases include helping blind/low-vision users understand surroundings, locate objects, and access visual information. Broader uses include gaming assistance, troubleshooting, hands-free help, travel, shopping, learning, and everyday contextual vision.
 
 - [Founding specification](docs/incubator/ZENITH_VISUAL_ASSISTANT.md)
-- Planned future repo: `ZachPoli/zenith-visual-assistant`
+- Incubator repo: `ZachPoli/zenith-visual-assistant` (private)
 
-### Zenith Computer Agent — Act
+### [Zenith Computer Agent — Act](https://github.com/ZachPoli/zenith-computer-agent)
 
 A conversational layer for operating computers and applications through natural intent instead of requiring the user to visually navigate every menu, window, and control.
 
 The accessibility origin is reducing computer-use barriers. The broader opportunity is hands-free and intent-driven productivity for everyone.
 
 - [Founding specification](docs/incubator/ZENITH_COMPUTER_AGENT.md)
-- Planned future repo: `ZachPoli/zenith-computer-agent`
+- Incubator repo: `ZachPoli/zenith-computer-agent`
 
 ## Parked / Internal Software Assets
 
