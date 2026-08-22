@@ -1,208 +1,255 @@
 # Zenith Capital Group — First 90 Days
 
-This execution plan is now centered on **turning the existing inventory application into a streamlined, trial-ready industrial product** rather than relying primarily on open-ended custom consulting.
+This plan is centered on one company objective:
 
-The operating loop is:
+> **Take FamiliarVoice through the complete product lifecycle: finish -> outside beta -> release -> monetize -> support -> learn.**
 
-> Build -> simplify -> package -> put in front of real users -> learn -> sell -> modularize what repeats.
+Zenith's long-term vision now includes broader accessibility-first AI products, especially visual assistance and conversational computer control. Those ideas are documented as incubators, not parallel full-time engineering projects.
 
 ## Operating Rules
 
-- Product work must move the software closer to being installable and usable by a stranger.
-- Do not add features simply because they are technically interesting.
-- Keep the inventory core small; factory-specific software belongs behind integration/adaptor boundaries.
-- Customer contact remains required, but use a concrete product/trial whenever possible instead of blank-page consulting discovery.
-- FamiliarVoice continues through bounded milestones and is not abandoned.
-- Career Command Center remains internal-first until the workflow is proven enough to justify commercialization.
-- No new speculative product becomes active without an explicit decision to pause something else.
-- Protect sleep, exercise, food, and recovery because founder capacity is a business asset.
+- FamiliarVoice is the #1 product priority.
+- Shipping and outside-user evidence outrank starting new codebases.
+- A feature is not complete until a real user can use it reliably.
+- Product work includes consent/privacy, onboarding, beta operations, distribution, pricing, support, documentation, and feedback collection — not only coding.
+- Zenith Visual Assistant and Zenith Computer Agent may receive research/specification work but should not become active builds before the FamiliarVoice release/monetization gate.
+- Zenith Inventory and Career Command Center remain parked/internal assets unless a concrete opportunity justifies attention.
+- Protect founder health and sustainability; consistency over 90 days matters more than unsustainable bursts.
 
 ---
 
-# Days 1–14 — Secure, Baseline, and Unbloat
+# Days 1–14 — Beta Readiness
 
-## Zenith Inventory
+## Product
 
-- [ ] Remove active committed secrets/default credentials from the repository.
-- [ ] Rotate any credential that was ever real or reused elsewhere.
-- [ ] Create a clean productization branch.
-- [ ] Document current valuable behavior before deleting legacy code.
-- [ ] Define a smoke-test checklist for inventory CRUD, barcode lookup, quantity adjustment, import/export, labels, backup, and restore.
-- [ ] Identify Environmental Pneumatics-specific code and separate it into three groups:
-  - useful generic inventory behavior
-  - optional manufacturing behavior
-  - obsolete/legacy behavior to remove
-- [ ] Define the new generic item model.
-- [ ] Define an integration interface so ProNest becomes the first adapter rather than a core dependency.
-- [ ] Get the current application running on the founder's PC from a clean setup and record every friction point.
+- [ ] Confirm current FamiliarVoice project state and release blockers.
+- [ ] Finish the current bounded beta milestone without redesigning working systems.
+- [ ] Keep assisted voice enrollment for the next beta rather than expanding into unnecessary self-service infrastructure.
+- [ ] Create a repeatable tester onboarding checklist.
+- [ ] Verify installation/update path on supported Android devices.
+- [ ] Verify notification -> sender identification -> familiar-voice audio -> output route on supported setups.
+- [ ] Define known limitations clearly.
 
-**Exit criterion:** we understand exactly what the current program does, what must survive, and what should leave the core.
+## Trust / consent / legal readiness
 
----
+- [ ] Create beta tester agreement / NDA as appropriate.
+- [ ] Document voice consent requirements.
+- [ ] Review privacy/data handling language.
+- [ ] Identify what data leaves the device and why.
+- [ ] Create a simple deletion/offboarding process for tester data where applicable.
 
-# Days 15–35 — Zero-Hassle Local MVP
+## Beta operations
 
-Goal: eliminate the current installation burden.
+- [ ] Reach the intended small beta cohort rather than recruiting indefinitely.
+- [ ] Create one feedback route.
+- [ ] Create one bug/issue intake process.
+- [ ] Define the questions every tester should answer after meaningful use.
 
-- [ ] Introduce an embedded local database option; SQLite is the first architecture to evaluate.
-- [ ] Automatically create the local database/schema on first launch.
-- [ ] Store application data in a normal writable user-data directory.
-- [ ] Remove PostgreSQL as a requirement for the first single-user desktop release.
-- [ ] Package a Windows executable/installer.
-- [ ] Add optional fictional demo inventory.
-- [ ] Verify install -> launch -> close -> reopen -> backup -> restore on a clean Windows environment.
-- [ ] Establish simple versioning and release notes.
-
-**Acceptance target:** a nontechnical user can download/install, launch, and begin entering/importing inventory in under five minutes without Python, PostgreSQL, or a terminal.
+**Exit criterion:** a tester can be onboarded using a repeatable process and complete the core FamiliarVoice experience without the founder improvising every step.
 
 ---
 
-# Days 36–55 — Streamlined Industrial Inventory Core
+# Days 15–35 — Real Beta Usage
 
-Build only the core workflow that most target users need.
+Run the product with outside users and prioritize evidence over feature ideas.
 
-- [ ] Generic item fields: SKU/barcode, item name/description, category/material, quantity, unit, location/bin/shelf, minimum stock, supplier, notes, last updated.
-- [ ] Optional manufacturing fields: thickness/gauge, dimensions, grade/material details.
-- [ ] Fast barcode scan -> lookup -> receive/consume/adjust.
-- [ ] Inventory movement/history log.
-- [ ] Low-stock/reorder view.
-- [ ] Search/filter/sort for hundreds or thousands of items.
-- [ ] CSV/XLSX import with validation/preview.
-- [ ] CSV/XLSX export.
-- [ ] Printable barcode/QR labels.
-- [ ] Reliable backup/restore.
-- [ ] Basic dashboard: low stock, recent activity, items by location/category.
-- [ ] Remove or isolate legacy controls that do not support the primary workflow.
+Track:
 
-**Exit criterion:** the application feels like one coherent inventory product, not a collection of EP-era utilities.
+- onboarding failures;
+- device/OS compatibility problems;
+- notification reliability;
+- audio-generation failures;
+- latency;
+- confusing permissions;
+- voice-quality reactions;
+- whether users actually keep the feature enabled;
+- situations where the product feels useful versus gimmicky;
+- privacy/consent concerns;
+- support burden per tester.
 
----
+### Engineering rule
 
-# Days 56–65 — Modular Integrations
+Fix problems that block the core experience first.
 
-The core should not know how every factory operates.
+Do not add large new features because one tester casually suggests them. Classify feedback as:
 
-- [ ] Create a stable integration/adaptor contract.
-- [ ] Move ProNest-specific transformation/export logic into its own adapter.
-- [ ] Keep standard spreadsheet interchange in the core.
-- [ ] Define configuration/metadata an adapter can expose to the UI.
-- [ ] Create a template/example adapter for future customer systems.
-- [ ] Document how a new integration can consume inventory data and produce/import external data without modifying core inventory logic.
+- blocker;
+- repeated high-value request;
+- nice-to-have;
+- future product idea;
+- out of scope.
 
-Potential future adapters should be driven by actual demand:
-
-- ProNest
-- laser/CNC systems
-- ERP exports/imports
-- accounting systems
-- supplier systems
-- customer-specific CSV mappings
-- APIs
-
-**Architecture rule:** one customer's external system should not permanently bloat the product core.
+**Exit criterion:** several outside users have completed meaningful use and the highest-risk reliability/onboarding problems are understood.
 
 ---
 
-# Days 66–75 — Trial-Ready Release
+# Days 36–55 — Commercialization Preparation
 
-- [ ] Neutral Zenith product branding.
-- [ ] Signed/versioned release build where practical.
-- [ ] Download page/release artifact.
-- [ ] Fictional industrial demo dataset.
-- [ ] Two-to-three-minute demo video or GIF.
-- [ ] One-page quick-start guide.
-- [ ] Clear feedback/bug-report route.
-- [ ] Basic terms around backups, data responsibility, and trial use.
+## Product/release
 
-**Exit criterion:** we can send a business one link and reasonably ask them to try the product themselves.
+- [ ] Define the release candidate scope.
+- [ ] Establish versioning and release notes.
+- [ ] Prepare Play Store/distribution requirements.
+- [ ] Produce screenshots and a short product demo.
+- [ ] Write clear onboarding/help content.
+- [ ] Set up support/contact route.
+- [ ] Define minimum device/OS compatibility.
 
----
+## Positioning
 
-# Days 76–90 — Real User Validation and First Revenue
+Explain FamiliarVoice in human terms before technical terms.
 
-Put the trial in front of **3–5 qualified industrial businesses/users**.
+Core story:
 
-The contact goal is no longer generic mass prospecting. The goal is to get relevant people through a concrete product experience.
+> FamiliarVoice makes supported incoming messages feel more personal and accessible by reading them in voices associated with the people who sent them.
 
-Observe:
+Test positioning across:
 
-- Could they install without help?
-- Could they import or enter representative inventory?
-- Did barcode/quantity workflows make sense?
-- Which current system do they need to exchange data with?
-- What blocked adoption?
-- Which requested features repeat across users?
-- Would they pay for the product itself?
-- Would they pay for onboarding/data migration?
-- Would they pay for a required integration?
+- accessibility;
+- convenience;
+- personalization;
+- wearables/hands-free use;
+- emotional familiarity/comfort.
 
-### First monetization experiments
+Do not overstate medical or therapeutic benefits.
 
-Test combinations of:
+## Pricing
 
-- local/desktop license
-- onboarding and spreadsheet migration
-- paid integration modules
-- bounded customization
-- support/maintenance
+Test a simple model rather than building complex billing infrastructure.
 
-Do not build cloud sync, multi-user architecture, purchase orders, MRP, or large SaaS infrastructure merely because they might someday be useful. Those become roadmap items when evidence justifies them.
+Questions to answer:
 
----
+- free trial or limited free tier?
+- monthly versus annual subscription?
+- how much inference/voice cost does an active user create?
+- what price feels reasonable for the recurring benefit?
+- should accessibility partnerships eventually sponsor some users?
 
-# FamiliarVoice During the 90 Days
-
-FamiliarVoice remains active, but bounded.
-
-- Maintain a clearly defined next milestone.
-- Do not allow it to derail the inventory trial-ready sequence.
-- Move it toward outside-user testing rather than endless internal polishing.
-- Reassess commercialization once Zenith Inventory reaches a stable trial milestone or if FamiliarVoice shows stronger external traction first.
+**Exit criterion:** Zenith has a product that can be described, priced, supported, and distributed without explaining the source code.
 
 ---
 
-# Customer Outreach During the 90 Days
+# Days 56–75 — Release
 
-Keep the existing local industrial pipeline and follow-up commitments.
+- [ ] Complete release-candidate testing.
+- [ ] Resolve release-blocking bugs.
+- [ ] Finish store/distribution materials.
+- [ ] Publish privacy/consent/support documentation.
+- [ ] Release to the intended first public/paid audience.
+- [ ] Verify real installation from the distribution channel rather than development tooling.
+- [ ] Monitor crashes, support requests, failed onboarding, and usage behavior.
 
-However, shift the purpose of new outreach from:
+The goal is not a perfect launch. The goal is a **real launch**.
 
-> "What manual process can I build software for?"
+**Exit criterion:** somebody who is not part of the development process can discover/download the product through the intended channel and use the core experience.
 
-Toward:
+---
 
-> "I built a simple barcode-first inventory tool for small industrial teams. Can you try it and tell me what prevents it from fitting your operation?"
+# Days 76–90 — Monetize, Support, Learn
 
-This preserves customer evidence while matching Zenith's product-first strategy.
+Collect the evidence that determines what Zenith should do next.
+
+Measure:
+
+- installs/downloads;
+- successful onboarding;
+- active users;
+- retention where measurable;
+- paid conversions;
+- support burden;
+- recurring cost per active user;
+- repeated feature requests;
+- device/wearable demand;
+- referrals/word of mouth;
+- user stories that demonstrate meaningful benefit.
+
+### Commercial goals
+
+- [ ] first external paying user/customer;
+- [ ] first repeatable payment flow;
+- [ ] understand unit economics well enough to price responsibly;
+- [ ] collect testimonial/case-study permission where appropriate;
+- [ ] document what worked and failed in the full concept-to-market cycle.
+
+**Exit criterion:** FamiliarVoice has completed a genuine build -> release -> monetize -> support experiment, even if the commercial result is modest.
+
+---
+
+# Accessibility / AI Incubator During the 90 Days
+
+Two future product directions are formally incubating:
+
+## Zenith Visual Assistant — Perceive
+
+Conversational AI with live camera/screen context, with accessibility use cases such as helping blind/low-vision users understand surroundings and broader uses such as gaming, troubleshooting, hands-free assistance, and contextual visual help.
+
+## Zenith Computer Agent — Act
+
+Conversational operation of computers and applications, with an accessibility-first goal of reducing dependence on visually navigating complex interfaces and a broader productivity market.
+
+### Incubator rule
+
+During this 90-day window, incubator work may include:
+
+- founding documents;
+- accessibility/user research;
+- architecture/API feasibility notes;
+- competitor/capability research;
+- very small throwaway experiments.
+
+It should **not** become a second active product-development schedule before FamiliarVoice reaches the release/monetization gate.
+
+---
+
+# Networking and Mission Development
+
+Begin building the ecosystem Zenith will eventually need.
+
+- [ ] identify major accessibility / assistive-technology conferences and communities;
+- [ ] begin a relationship list of accessibility professionals, researchers, founders, hardware/device companies, rehabilitation organizations, and potential advisors;
+- [ ] document potential government/institutional funding or procurement paths for later investigation;
+- [ ] learn the language and standards of accessibility rather than treating lived disability experience as a feature checklist.
+
+Do not optimize for investor attention yet. Build enough product/user evidence that future investor conversations are grounded in reality.
 
 ---
 
 # Revenue Milestones
 
-1. **$1** — proof someone will pay Zenith.
-2. **$500** — proof of a real commercial transaction.
-3. **First paid product/setup/integration customer** — proof the inventory thesis can monetize.
-4. **$1,000/month** — meaningful contribution to personal burn.
-5. **$3,000/month** — conservative personal-spending coverage.
-6. **$5,000+/month** — room to reinvest.
-7. **Stable recurring cash flow** — prerequisite for serious hiring and acquisition planning.
+Revenue is important, but the first 90 days are primarily about proving that Zenith can complete the product lifecycle.
+
+1. **First paying FamiliarVoice user** — proof someone values the product enough to pay.
+2. **First $500 cumulative product revenue** — early commercial signal.
+3. **Repeat payment / retention** — stronger than a one-time curiosity purchase.
+4. **$1,000/month** — meaningful contribution to company/founder economics.
+5. **$3,000/month** — meaningful operating independence.
+6. **$5,000+/month** — room to reinvest in product and team.
+7. **Stable recurring revenue** — foundation for hiring and more ambitious R&D.
+
+Revenue milestones are decision signals, not permission to abandon the mission for whatever pays fastest.
 
 ---
 
 # Day-90 Decision
 
-Choose based on evidence:
+Use evidence from FamiliarVoice to choose the next move.
 
-### A — Double down on Zenith Inventory
-Use when businesses can successfully trial it and at least some show willingness to pay for the product, setup, or integrations.
+### A — FamiliarVoice has traction
 
-### B — Refine positioning/workflow
-Use when users engage with the trial but the product solves the wrong slice of inventory or needs a narrower industrial niche.
+Continue investing in distribution, reliability, device support, and retention while beginning a bounded R&D track for the next Zenith product.
 
-### C — Product-plus-services hybrid
-Use when the core product creates conversations but most revenue initially comes from migration, integrations, or bounded customization.
+### B — FamiliarVoice is loved by a narrow group but has limited scale
 
-### D — Reallocate product priority
-Use only if real evidence shows another owned product, such as FamiliarVoice, has materially stronger commercial pull.
+Keep it alive as a focused product while applying the lessons/team/technology toward the next accessibility-first product.
 
-The goal is not to defend a favorite idea forever. The goal is to build owned software that real users can adopt and pay for.
+### C — FamiliarVoice does not monetize meaningfully but completes the lifecycle
+
+Do not call the project wasted. Preserve the product and lessons, then select the next product using real evidence and the Perceive -> Understand -> Act thesis.
+
+### Next major product candidates
+
+- Zenith Visual Assistant;
+- Zenith Computer Agent;
+- a convergence or smaller stepping-stone discovered through accessibility research.
+
+The next choice should be explicit. Do not quietly begin three products at once.
