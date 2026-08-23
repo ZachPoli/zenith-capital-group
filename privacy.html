@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Preliminary organization privacy page for Zenith Capital Group.">
+  <meta name="description" content="Privacy information for Zenith Capital Group and FamiliarVoice Notifications.">
   <title>Privacy | Zenith Capital Group</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,22 +25,75 @@
   <main id="main-content">
     <section class="page-intro">
       <div class="container narrow">
-        <p class="eyebrow">Preliminary organization privacy page</p>
+        <p class="eyebrow">Privacy policy</p>
         <h1>Privacy</h1>
-        <p class="lead">This page provides preliminary privacy information for Zenith Capital Group.</p>
+        <p class="lead">This policy explains how ZENITH CAPITAL GROUP LLC handles information for this website and the FamiliarVoice Notifications Android app.</p>
+        <p><strong>Effective date:</strong> August 23, 2026</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container narrow prose">
-        <h2>Organization website</h2>
-        <p>This is a static informational website for ZENITH CAPITAL GROUP LLC. It does not include forms, user accounts, advertising, analytics, or organization-operated tracking technologies.</p>
+        <h2>Who operates FamiliarVoice Notifications</h2>
+        <p>FamiliarVoice Notifications is operated by ZENITH CAPITAL GROUP LLC, Tennessee, United States. It is an accessibility-focused Android app that can read supported message notifications aloud using assigned text-to-speech voices.</p>
 
-        <h2>Product disclosures</h2>
-        <p>FamiliarVoice Notifications is currently an Android accessibility prototype and is not represented on this website as publicly available. Detailed product-specific privacy disclosures will be published before any public app release.</p>
+        <h2>Information FamiliarVoice processes</h2>
+
+        <h3>Message notification data</h3>
+        <p>After the user completes the in-app disclosure and enables notification access, FamiliarVoice can process supported Google Messages notifications. For an accepted notification, the app may send the sender information, message text, source application identifier, and the selected unknown-sender behavior to the FamiliarVoice backend over HTTPS.</p>
+        <p>The backend uses sender information to select an assigned voice and uses the message text to generate speech. When speech is requested, the text needed for speech generation and the selected voice identifier are sent to ElevenLabs for text-to-speech processing. The FamiliarVoice SQLite mapping database does not intentionally store ordinary notification message bodies, ordinary notification sender occurrences, source-application values, or generated notification audio.</p>
+
+        <h3>Contact and voice-assignment data</h3>
+        <p>FamiliarVoice does not request broad access to the user's address book. When the user chooses to assign a voice, Android's system phone-number picker is used so the user deliberately selects a specific contact entry. After the user confirms an assignment, the selected contact name and phone number may be transmitted to the FamiliarVoice backend. Normalized sender aliases are stored with the selected voice profile so future messages from that sender can use the assigned voice.</p>
+
+        <h3>Beta access credentials</h3>
+        <p>External beta users receive an opaque access code. The code is stored in the app's private application storage and is sent to the FamiliarVoice backend to authenticate requests and select the user's isolated beta data store. The app does not display the saved code after configuration. Beta access mappings are retained while the tester's access remains active and can be revoked.</p>
+
+        <h3>Local preferences and temporary audio</h3>
+        <p>Settings such as the master enabled/paused state and unknown-sender preference are stored locally on the device. Generated MP3 files are written only to the app's cache for playback and are deleted during normal completion, failure, cancellation, or service shutdown. Android or the operating system may remove remaining cache files later if the app or device terminates unexpectedly.</p>
+
+        <h2>How information is used</h2>
+        <p>Information is used only for app functionality, including authenticating beta access, identifying the correct isolated mapping database, matching a sender to a configured voice, saving deliberate voice assignments, applying the user's message-reading preference, generating text-to-speech audio, and returning that audio to the device.</p>
+        <p>FamiliarVoice does not use message content, contact data, or beta access data for advertising or marketing, and the Android app does not include advertising, analytics, attribution, or third-party crash-reporting SDKs.</p>
+
+        <h2>Service providers</h2>
+        <p>FamiliarVoice uses service providers to operate the app:</p>
+        <ul>
+          <li><strong>Render</strong> hosts the FamiliarVoice backend and its persistent SQLite storage.</li>
+          <li><strong>ElevenLabs</strong> processes text submitted for text-to-speech generation and returns generated audio.</li>
+        </ul>
+        <p>These providers process data needed to provide their services. FamiliarVoice does not sell user data. Transfers to these providers are for app functionality and are intended to be handled as service-provider or processor activity on behalf of ZENITH CAPITAL GROUP LLC.</p>
+
+        <h2>ElevenLabs history and retention</h2>
+        <p>The current FamiliarVoice notification path does not use ElevenLabs Zero Retention Mode. After a notification speech stream ends, the backend attempts a bounded, exact-request-ID cleanup of the corresponding ElevenLabs Text to Speech History item. This cleanup is best-effort and is not guaranteed if the backend process terminates before cleanup can complete.</p>
+        <p>ElevenLabs states that, when Zero Retention Mode is not active, deleting a generation removes the corresponding audio and text from its database, while related debugging or moderation logs may still be retained. ElevenLabs also states that deleted database items may remain in backups for up to 30 days. FamiliarVoice therefore does not represent notification speech processing as immediate or guaranteed zero retention across every ElevenLabs system.</p>
+
+        <h2>Retention of FamiliarVoice data</h2>
+        <ul>
+          <li>Notification message content is not intentionally retained in the FamiliarVoice SQLite mapping database after the request is processed.</li>
+          <li>Voice-profile configuration and normalized sender aliases are retained so assigned voices continue to work until they are removed or the relevant beta data is deleted.</li>
+          <li>Beta access configuration is retained while access is active and may be revoked or replaced.</li>
+          <li>Technical hosting records may be retained by service providers under their own operational and legal retention practices.</li>
+        </ul>
+
+        <h2>User controls and deletion requests</h2>
+        <p>Users can pause FamiliarVoice processing with the master control and can choose whether unknown senders are read with a default voice or skipped. Contact assignment occurs only after a deliberate system-picker selection and confirmation.</p>
+        <p>To request deletion of FamiliarVoice data under our control, including stored beta voice mappings and sender aliases, email <a href="mailto:zachmaness.dev@gmail.com">zachmaness.dev@gmail.com</a> with enough information for us to identify the relevant beta access record. We may need to verify the request before deleting data. Where third-party service-provider data is involved, deletion is subject to the provider's systems, applicable retention periods, and legal obligations.</p>
+
+        <h2>Security</h2>
+        <p>Release traffic containing user data is transmitted over encrypted HTTPS connections. FamiliarVoice uses private access credentials for hosted app requests and isolates external beta testers into separate mapping databases. No method of electronic transmission or storage is completely secure, so absolute security cannot be guaranteed.</p>
+
+        <h2>Children</h2>
+        <p>FamiliarVoice Notifications is not directed to children under 13 and is not designed as a children's service.</p>
+
+        <h2>Organization website</h2>
+        <p>The Zenith Capital Group website is a static informational website. It does not include forms, user accounts, advertising, analytics, or organization-operated tracking technologies.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>This policy may be updated as FamiliarVoice changes. Material changes to data handling will be reflected here and, where required, in the app's disclosures and Google Play Data safety information.</p>
 
         <h2>Contact</h2>
-        <p>Questions about this preliminary organization privacy page may be sent to <a href="mailto:zachmaness.dev@gmail.com">zachmaness.dev@gmail.com</a>.</p>
+        <p>Privacy questions and deletion requests may be sent to <a href="mailto:zachmaness.dev@gmail.com">zachmaness.dev@gmail.com</a>.</p>
       </div>
     </section>
   </main>
