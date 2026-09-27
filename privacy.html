@@ -28,72 +28,57 @@
         <p class="eyebrow">Privacy policy</p>
         <h1>Privacy</h1>
         <p class="lead">This policy explains how ZENITH CAPITAL GROUP LLC handles information for this website and the FamiliarVoice Notifications Android app.</p>
-        <p><strong>Effective date:</strong> August 23, 2026</p>
+        <p><strong>Last updated:</strong> September 26, 2026</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container narrow prose">
-        <h2>Who operates FamiliarVoice Notifications</h2>
-        <p>FamiliarVoice Notifications is operated by ZENITH CAPITAL GROUP LLC, Tennessee, United States. It is an accessibility-focused Android app that can read supported message notifications aloud using assigned text-to-speech voices.</p>
-
-        <h2>Information FamiliarVoice processes</h2>
-
-        <h3>Message notification data</h3>
-        <p>After the user completes the in-app disclosure and enables notification access, FamiliarVoice can process supported Google Messages notifications. For an accepted notification, the app may send the sender information, message text, source application identifier, and the selected unknown-sender behavior to the FamiliarVoice backend over HTTPS.</p>
-        <p>The backend uses sender information to select an assigned voice and uses the message text to generate speech. When speech is requested, the text needed for speech generation and the selected voice identifier are sent to ElevenLabs for text-to-speech processing. The FamiliarVoice SQLite mapping database does not intentionally store ordinary notification message bodies, ordinary notification sender occurrences, source-application values, or generated notification audio.</p>
-
-        <h3>Contact and voice-assignment data</h3>
-        <p>FamiliarVoice does not request broad access to the user's address book. When the user chooses to assign a voice, Android's system phone-number picker is used so the user deliberately selects a specific contact entry. After the user confirms an assignment, the selected contact name and phone number may be transmitted to the FamiliarVoice backend. Normalized sender aliases are stored with the selected voice profile so future messages from that sender can use the assigned voice.</p>
-
-        <h3>Beta access credentials</h3>
-        <p>External beta users receive an opaque access code. The code is stored in the app's private application storage and is sent to the FamiliarVoice backend to authenticate requests and select the user's isolated beta data store. The app does not display the saved code after configuration. Beta access mappings are retained while the tester's access remains active and can be revoked.</p>
-
-        <h3>Local preferences and temporary audio</h3>
-        <p>Settings such as the master enabled/paused state and unknown-sender preference are stored locally on the device. Generated MP3 files are written only to the app's cache for playback and are deleted during normal completion, failure, cancellation, or service shutdown. Android or the operating system may remove remaining cache files later if the app or device terminates unexpectedly.</p>
-
-        <h2>How information is used</h2>
-        <p>Information is used only for app functionality, including authenticating beta access, identifying the correct isolated mapping database, matching a sender to a configured voice, saving deliberate voice assignments, applying the user's message-reading preference, generating text-to-speech audio, and returning that audio to the device.</p>
-        <p>FamiliarVoice does not use message content, contact data, or beta access data for advertising or marketing, and the Android app does not include advertising, analytics, attribution, or third-party crash-reporting SDKs.</p>
-
-        <h2>Service providers</h2>
-        <p>FamiliarVoice uses service providers to operate the app:</p>
-        <ul>
-          <li><strong>Render</strong> hosts the FamiliarVoice backend and its persistent SQLite storage.</li>
-          <li><strong>ElevenLabs</strong> processes text submitted for text-to-speech generation and returns generated audio.</li>
-        </ul>
-        <p>These providers process data needed to provide their services. FamiliarVoice does not sell user data. Transfers to these providers are for app functionality and are intended to be handled as service-provider or processor activity on behalf of ZENITH CAPITAL GROUP LLC.</p>
-
-        <h2>ElevenLabs history and retention</h2>
-        <p>The current FamiliarVoice notification path does not use ElevenLabs Zero Retention Mode. After a notification speech stream ends, the backend attempts a bounded, exact-request-ID cleanup of the corresponding ElevenLabs Text to Speech History item. This cleanup is best-effort and is not guaranteed if the backend process terminates before cleanup can complete.</p>
-        <p>ElevenLabs states that, when Zero Retention Mode is not active, deleting a generation removes the corresponding audio and text from its database, while related debugging or moderation logs may still be retained. ElevenLabs also states that deleted database items may remain in backups for up to 30 days. FamiliarVoice therefore does not represent notification speech processing as immediate or guaranteed zero retention across every ElevenLabs system.</p>
-
-        <h2>Retention of FamiliarVoice data</h2>
-        <ul>
-          <li>Notification message content is not intentionally retained in the FamiliarVoice SQLite mapping database after the request is processed.</li>
-          <li>Voice-profile configuration and normalized sender aliases are retained so assigned voices continue to work until they are removed or the relevant beta data is deleted.</li>
-          <li>Beta access configuration is retained while access is active and may be revoked or replaced.</li>
-          <li>Technical hosting records may be retained by service providers under their own operational and legal retention practices.</li>
-        </ul>
-
-        <h2>User controls and deletion requests</h2>
-        <p>Users can pause FamiliarVoice processing with the master control and can choose whether unknown senders are read with a default voice or skipped. Contact assignment occurs only after a deliberate system-picker selection and confirmation.</p>
-        <p>To request deletion of FamiliarVoice data under our control, including stored beta voice mappings and sender aliases, email <a href="mailto:zachmaness.dev@gmail.com">zachmaness.dev@gmail.com</a> with enough information for us to identify the relevant beta access record. We may need to verify the request before deleting data. Where third-party service-provider data is involved, deletion is subject to the provider's systems, applicable retention periods, and legal obligations.</p>
-
+        <h2>Who operates FamiliarVoice</h2>
+        <p>FamiliarVoice Notifications is operated by ZENITH CAPITAL GROUP LLC, Tennessee, United States. It reads supported message notifications aloud using starter voices, your own enrolled voice, or a voice another user has shared with you.</p>
+        <h2>Google sign-in and beta access</h2>
+        <p>We use Google sign-in through Firebase Authentication. Google and Firebase process account information, such as your account identifier, email address and profile information, and authentication information needed to sign you in and keep your session. FamiliarVoice does not receive your Google password. Firebase also processes technical information, including IP addresses and user-agent information, for authentication security and abuse prevention.</p>
+        <p>The FamiliarVoice backend receives authentication tokens to verify requests. It stores an account identifier, the link to your isolated beta data, access status and related timestamps. The backend identifies your account using the verified sign-in identity rather than using your email address as the ownership key. Signing out does not delete these records.</p>
+        <p>Beta invitations and existing access codes help activate or migrate beta access. Invitation records include expiry and redemption status; the backend stores a hash of the invitation value rather than the raw value. Existing beta codes may remain in private app storage for the legacy access path. Google Play tester enrollment and in-app beta access are separate.</p>
+        <h2>Message notifications and playback</h2>
+        <p>After you accept the in-app disclosure and enable Android notification access, FamiliarVoice can process supported Google Messages and direct Google Voice notifications. It may send the sender name, a phone number when supplied by the notification, message text, source app identifier and playback preferences to our backend over HTTPS. The backend uses sender information to choose a voice and sends the text needed for speech generation and the selected voice identifier to ElevenLabs.</p>
+        <p>Automatic mode can request speech when an eligible notification arrives. On demand keeps waiting messages in bounded process memory on your phone and requests speech only when you activate playback. Waiting messages expire after ten minutes; they do not survive app-process termination. FamiliarVoice does not intentionally store ordinary notification message bodies or generated notification audio in its mapping database.</p>
+        <p>Generated message audio is temporarily cached on your phone and cleaned up during normal completion, failure, stopping or service shutdown. An unexpected app or device termination may leave cache files until later cleanup. Voice previews send a fixed sample sentence for speech generation, not the contents of an incoming message; preview audio is handled in app memory.</p>
+        <h2>Contact assignments</h2>
+        <p>FamiliarVoice does not request broad access to your address book. Android’s phone-number picker lets you deliberately choose an entry. Selecting an entry for an assignment may save it immediately; a separate confirmation is not always required. The selected name and number are sent to our backend and stored with the voice assignment and matching identifiers. Unassign removes that assignment; it does not delete the contact from your phone or delete the voice.</p>
+        <h2>Recording and enrolling your voice</h2>
+        <p>My voice is optional. If you choose it, the app requests microphone permission, records a sample for your review, and asks for explicit self-voice enrollment consent before upload. Your recording passes through our backend to ElevenLabs to create the voice used for speech generation. Do not submit someone else’s voice through self-enrollment.</p>
+        <p>We store the voice’s display name, ownership link, private provider voice reference, enrollment status and consent record, including consent version, method and time. The mapping database does not store the recording itself. Upload handling may use temporary server storage. On your phone, recordings use app-private temporary files; the app attempts cleanup after successful enrollment and when recordings are discarded or the recording flow is closed. Failed cleanup or an unexpected termination can leave temporary files for later cleanup.</p>
+        <p>ElevenLabs retains voice-cloning data needed to provide the enrolled voice. Instant voice cloning is not covered by its Zero Retention Mode. Removing the local sample or signing out does not delete the provider voice.</p>
+        <h2>Sharing a voice</h2>
+        <p>You can create an invitation and send it through an app you choose. That app processes the invitation under its own privacy practices. Keep invitations private: another signed-in user with eligible access who obtains an unused invitation may be able to redeem it. Voice invitations expire after 24 hours and are intended for one acceptance.</p>
+        <p>We store invitation status, expiry, voice display name, owner and recipient account references, and accepted sharing permissions. The recipient sees the shared voice’s display name and can use it for supported message playback and fixed previews. Sharing does not send the original enrollment recording or provider credentials to the recipient, and it does not give the owner access to the recipient’s messages or contact list.</p>
+        <p>Owners can revoke accepted access. New playback requests check authorization; revocation removes the shared route, and later requests may use the recipient’s default-voice preference instead. Revocation cannot undo audio already delivered or played. Deleting an enrolled voice also prevents future authorized use of that voice. Pending invitations currently have no in-app cancellation control and expire instead.</p>
+        <h2>Local settings and technical records</h2>
+        <p>The app stores preferences such as consent, playback mode, unknown-sender behavior, speech speed and the chime setting locally. Authentication/session information is maintained by the sign-in components. Our backend stores account, access, assignment, consent and voice-lifecycle records needed to run the service. Operational records can include request timing, status and errors. Logs are designed to avoid message text, recordings, raw invitation values and authentication tokens; hosting providers may retain their own technical access records.</p>
+        <h2>Service providers and data use</h2>
+        <p>Google/Firebase provides sign-in and authentication; Render hosts the backend and persistent storage; ElevenLabs processes text for speech and recordings for voice enrollment. These services receive data needed for those functions. Their processing and retention also depend on their policies and applicable service settings.</p>
+        <p>FamiliarVoice uses this information to authenticate access, manage voices and permissions, match senders, generate requested speech and maintain the service. We do not sell user data or use message content, contact assignments or voice recordings for advertising. The Android app does not include advertising, analytics, attribution or third-party crash-reporting SDKs. We do not promise that service providers have no operational logs or that all provider data-use settings are zero-retention.</p>
+        <h2>Retention and deletion</h2>
+        <p>Account links, access records, assignments, voice ownership and consent records remain in backend storage to support the service and its controls. Expired invitations and revoked grants may retain status records; expiry or revocation is not the same as deletion of every record. Render automatically creates daily snapshots of the backend’s persistent disk; Render says snapshots are available for at least seven days. A snapshot may retain data that has since been removed from the live database, and it cannot be edited one account at a time. The app also has a restricted pre-migration database copy on that same disk; it is not a separate disaster-recovery system. We have not verified a maximum snapshot-retention period or restore-time deletion procedure. If a snapshot is restored, deleted-account data could return unless deletion is reapplied before service resumes.</p>
+        <p>For notification speech and fixed previews, the backend attempts to delete the corresponding ElevenLabs generation-history item after streaming ends. This is best-effort and may fail if the process stops or the provider cannot complete the request. This is not Zero Retention Mode. ElevenLabs states that generation deletion removes the corresponding text and audio from its database, but related debugging/moderation records may remain and deleted database items may remain in backups for up to 30 days. This is not a guarantee of erasure from every provider system.</p>
+        <p>Deleting your enrolled voice in My voice initiates provider deletion and removal of its live voice records. A provider cleanup failure can leave deletion pending and require a retry; we do not report that as completed provider deletion. Unassigning, revoking access, deleting a voice and deleting account data are different actions.</p>
+        <h2>Your choices and deletion requests</h2>
+        <p>You can change playback mode, skip unknown senders, stop the current readout, unassign contacts, revoke shared access, delete your enrolled voice, sign out, or withdraw notification-processing consent in the app. Android settings let you revoke notification access and microphone permission. Stop reading affects the current readout; queued messages may still play. Signing out or uninstalling does not delete your server-side account or voice records.</p>
+        <p>To request deletion of your FamiliarVoice account and associated data, use Settings &gt; Privacy and data &gt; Delete account and data, or follow the <a href="delete-account.html">account deletion instructions</a> without installing the app. The owner personally handles each request. Requests require ownership verification; opening an email draft does not submit a request or immediately delete data. We will send an initial response within seven days after receiving your request. This initial response is not a guarantee that deletion will be completed within seven days. This deletes the FamiliarVoice account, not your Google account. We will tell you when deletion is complete or explain any outstanding provider cleanup or justified retention.</p>
         <h2>Security</h2>
-        <p>Release traffic containing user data is transmitted over encrypted HTTPS connections. FamiliarVoice uses private access credentials for hosted app requests and isolates external beta testers into separate mapping databases. No method of electronic transmission or storage is completely secure, so absolute security cannot be guaranteed.</p>
-
+        <p>Release traffic containing user data uses HTTPS. The backend verifies access and separates account/tester data. No storage or transmission method is completely secure, so we cannot guarantee absolute security.</p>
         <h2>Children</h2>
-        <p>FamiliarVoice Notifications is not directed to children under 13 and is not designed as a children's service.</p>
-
+        <p>FamiliarVoice Notifications is not directed to children under 13 and is not designed as a children’s service.</p>
         <h2>Organization website</h2>
-        <p>The Zenith Capital Group website is a static informational website. It does not include forms, user accounts, advertising, analytics, or organization-operated tracking technologies.</p>
-
-        <h2>Changes to this policy</h2>
-        <p>This policy may be updated as FamiliarVoice changes. Material changes to data handling will be reflected here and, where required, in the app's disclosures and Google Play Data safety information.</p>
-
-        <h2>Contact</h2>
-        <p>Privacy questions and deletion requests may be sent to <a href="mailto:zachmaness.dev@gmail.com">zachmaness.dev@gmail.com</a>.</p>
+        <p>The Zenith Capital Group website is an informational website hosted through GitHub Pages. It has no organization-operated accounts, advertising or analytics. Its hosting provider may process technical information associated with website requests.</p>
+        <h2>Changes and contact</h2>
+        <p>We update this policy as FamiliarVoice changes and reflect material data-handling changes in app disclosures and Google Play Data Safety information where required. Send privacy questions or deletion requests to <a href="mailto:zachmaness.dev@gmail.com">zachmaness.dev@gmail.com</a>.</p>
+        <h2>Provider privacy information</h2><ul>
+<li><a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a></li>
+<li><a href="https://elevenlabs.io/privacy-policy">ElevenLabs privacy policy</a> and <a href="https://elevenlabs.io/docs/eleven-api/resources/zero-retention-mode">retention documentation</a></li>
+<li><a href="https://render.com/privacy">Render privacy policy</a></li></ul>
+<p>See <a href="https://render.com/docs/disks">Render’s persistent-disk snapshot information</a> for its backup availability details.</p>
       </div>
     </section>
   </main>
