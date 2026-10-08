@@ -4,6 +4,15 @@ Official business-planning repository for **ZENITH CAPITAL GROUP LLC**, a softwa
 
 Website: <https://zachpoli.github.io/zenith-capital-group/>
 
+## October 7, 2026 planning update
+
+FamiliarVoice has progressed to Google Play Internal Testing: the latest reviewed evidence records v22 delivered to existing testers and owner-confirmed core playback checks. Public paid-launch readiness is not yet established. Usage-protection foundations are deployed disabled; activation and other release gates remain open.
+
+- [Evidence-backed FamiliarVoice status](docs/FAMILIARVOICE_STATUS_2026-10-07.md)
+- [Faster-revenue and visual-assistant strategy proposal](docs/REVENUE_AND_VISUAL_STRATEGY_2026-10-07.md)
+
+The strategy proposal evaluates a bounded cash-generating service offer and a phone-first visual workflow using existing glasses where feasible. It is a recommendation for founder decision; the flagship priority below is not silently changed.
+
 ## Mission
 
 > **Help people navigate the world more clearly through useful AI-integrated technology.**

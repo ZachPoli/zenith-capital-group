@@ -1,5 +1,7 @@
 # Zenith Capital Group — First 90 Days
 
+> October 7, 2026: this remains a relative-phase planning framework, not a dated record of completed work. FamiliarVoice is already in internal beta. Use the [current status snapshot](FAMILIARVOICE_STATUS_2026-10-07.md) and source launch checklist to assess remaining work; do not restart completed phases or interpret unchecked boxes as proof that work is unimplemented. The [30-day revenue experiment](REVENUE_AND_VISUAL_STRATEGY_2026-10-07.md) is a proposal awaiting the founder's strategic decision.
+
 This plan is centered on one company objective:
 
 > **Take FamiliarVoice through the complete product lifecycle: finish -> outside beta -> release -> monetize -> support -> learn.**

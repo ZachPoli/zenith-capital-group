@@ -1,5 +1,11 @@
 # Zenith Capital Group — Business Plan
 
+## Current evidence and strategic review — October 7, 2026
+
+Read the [FamiliarVoice status snapshot](FAMILIARVOICE_STATUS_2026-10-07.md) for the current internal-beta evidence, conditional November 12 target, unresolved launch gates and provisional pricing. FamiliarVoice is beyond the original MVP, but paid traction is not established by the reviewed records.
+
+The founder has requested a faster path to revenue and expressed strongest interest in visual assistance. The [revenue and visual strategy proposal](REVENUE_AND_VISUAL_STRATEGY_2026-10-07.md) recommends testing a bounded paid workflow alongside existing product commitments. The proposed allocation and potential shift remain decisions to make, not adopted policy. Existing manufacturing-service materials are available for this test but are not evidence of a currently active customer pipeline.
+
 ## Mission
 
 **Zenith exists to help people navigate the world more clearly through useful AI-integrated technology.**
