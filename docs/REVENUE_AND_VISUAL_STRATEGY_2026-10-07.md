@@ -1,8 +1,18 @@
 # Revenue and visual-assistant strategy — October 7, 2026
 
-Status: recommendation for founder decision, not an approved change to the flagship priority or authorization to buy hardware. The founder wants faster revenue and is most enthusiastic about visual assistance. Income target, deadline, available hours and exact glasses model remain to be confirmed.
+Status: **FamiliarVoice first — founder decision.** The founder explicitly chose to finish FamiliarVoice before pursuing another business/application. Available time is approximately 18 hours per week. Stated income milestones are $1,000 meaningful income, $4,000 sufficient to consider leaving employment, and $30,000 long-term; these were discussed as monthly targets, not current revenue or forecasts. Exact deadline and glasses model remain unconfirmed.
 
-## Recommendation
+## Adopted sequence
+
+Focus the available 18 hours on FamiliarVoice completion. Defer service-sales experiments, new application builds and glasses purchases. Visual assistance remains the strongest stated future product interest; reconsider the alternatives below after the FamiliarVoice release milestone.
+
+For planning, completion means a bounded release of the core experience: remaining reliability and accessibility acceptance, account deletion, provider/privacy and operational readiness, verified cost protection, distribution and support. Complete the launch-critical scope rather than every backlog feature. A release is distinct from monetization: the recorded limited-free launch target must not silently become a paid launch; payment readiness and willingness to pay remain subsequent commercial gates.
+
+Suggested weekly allocation: 12 hours resolving the highest-priority release blockers, 4 hours outside-user/device/accessibility acceptance, and 2 hours release operations, documentation and planning. Adjust to the actual blocking gate rather than filling engineering hours with new features. This allocation is a planning recommendation, not a new engineering task or deployment authorization.
+
+The previous parallel-work recommendation and 30-day experiment below are **deferred options**, not the current operating schedule.
+
+## Earlier recommendation — deferred
 
 Use a bounded paid-service offer for near-term cash while validating one visual workflow. Preserve FamiliarVoice's current users and finish a bounded release decision; do not let an indefinite polish cycle consume all available time. Avoid starting another broad consumer application merely because it is novel.
 
@@ -34,7 +44,7 @@ These are hypotheses, not validated markets or unique inventions. Compare prospe
 
 Best bridge between founder interest and possible revenue: **photo/voice-to-service-report**, initially phone-based and optionally glasses-enabled. It connects visual input to an output a business already needs. A buyer can judge time saved and report quality. Do not begin with general troubleshooting, autonomous repairs or navigation claims.
 
-## A bounded 30-day experiment
+## A bounded 30-day experiment — deferred until after FamiliarVoice
 
 Suggested allocation, subject to founder decision: 50% customer discovery/sales and paid delivery, 35% FamiliarVoice release blockers/support, 15% visual feasibility. Keep only one exploratory visual workflow active.
 

@@ -11,7 +11,7 @@ FamiliarVoice has progressed to Google Play Internal Testing: the latest reviewe
 - [Evidence-backed FamiliarVoice status](docs/FAMILIARVOICE_STATUS_2026-10-07.md)
 - [Faster-revenue and visual-assistant strategy proposal](docs/REVENUE_AND_VISUAL_STRATEGY_2026-10-07.md)
 
-The strategy proposal evaluates a bounded cash-generating service offer and a phone-first visual workflow using existing glasses where feasible. It is a recommendation for founder decision; the flagship priority below is not silently changed.
+The founder has confirmed **finish FamiliarVoice first**, with approximately 18 hours per week available. Service-sales and visual-workflow experiments are deferred until after the FamiliarVoice release milestone. The strategy document preserves those options for later consideration.
 
 ## Mission
 
